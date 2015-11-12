@@ -1,5 +1,10 @@
 {
 	"ImportPath": "github.com/VALERE91/logger",
 	"GoVersion": "go1.5.1",
-	"Deps": []
+	"Deps": [
+      {
+        "ImportPath": "github.com/mattn/goveralls",
+        "Rev": "7e68e2744ddc213f56b3111846cbf037dda4aec7"
+      }
+	]
 }
