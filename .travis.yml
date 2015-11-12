@@ -3,8 +3,7 @@ go:
 - tip
 script:
 - go test -v -covermode=count -coverprofile=coverage.out
-- $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken
-  $COVERALLS_TOKEN
+- $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
 env:
   global:
     secure: aA3opAWLlc7BL+/KDGVBRVkH76ZTWRJh5XrEY/xSxU17m30noivu95z5P5Njn13LDUv/mgfH+CXmbUjhV5vOV1oz/fKE+Dh1Evn52OJdw8hMl4qBpov/fRq+ZII4OBa1ewLfUzcorqMLPtbPQORFq5ob0kxMKb7XmdsRuY3t8vmV23f1xTvd77/EGHINgDQocjL8XfZrUR6IpAVRuWoISQz7njAVgIbyGQ17dInR/K6JdS+JUiCU5lGZVnYPZPEIQT2UXQps+V6oKmh9iI/LdJDylajnDE99n4oJe7tlnhmQjkLZRC4m0QKyI1IoR9pUsOdWYX6WqOeiu/f0UO0ytP3WHi6MXjwmnbznMOVnfvtrIz8WT0R7GK3PaqYpAAaPbFL3ceqlo3IojEPsJRwnutwpuZ4qdT1Az2qG1FyGY8px4ixHGH4S8kp1i57FVfhJbBaVLAAvG9DLXWLkMQZgy6DSHdLbGsH37cEapn6ZR4RYwvEPBoloIE+gEjxKcpAFWjqlNIV/vvOrKddV3qbHC68xIsQNpzN0FeGUzwQEL5zFtwiwbkpUqC7ZXQ0QARuAlrMrhWzfsc5IDILBV7LB17cgLfZNlG8jEAaHBgTbuy3o4JqcK9ZsepCiLORV/jhlaMDM2ou4rF5tC81T8OReFRdGJb9jrTLN72Q5ORSTigQ=
