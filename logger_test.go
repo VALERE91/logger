@@ -16,3 +16,11 @@ func TestConfigureMongoLogger(t *testing.T) {
 		t.Error("Mongo should be nil (implementation not finished)")
 	}
 }
+
+func TestTestWriterWrite(t *testing.T) {
+	wr := testWriter{}
+	wr.Write([]byte("HELLO"))
+	if wr.output != "HELLO"{
+		t.Error("Output of testWriter should be HELLO")
+	}
+}

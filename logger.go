@@ -33,3 +33,12 @@ func ConfigureFileLogger(path string) (logger *streamLogger, err error) {
 func ConfigureMongoLogger(path string) (logger *mongoLogger, err error) {
 	return nil, nil
 }
+
+type testWriter struct {
+	output string
+}
+
+func (self *testWriter) Write(b []byte) (n int, err error) {
+	self.output = string(b)
+	return len(b), nil
+}
