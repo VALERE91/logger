@@ -2,6 +2,8 @@ package logger
 
 import (
 	"os"
+
+	"gopkg.in/mgo.v2"
 )
 
 type Logger interface {
@@ -30,6 +32,24 @@ func ConfigureFileLogger(path string) (logger *streamLogger, err error) {
 	return FileLogger, nil
 }
 
-func ConfigureMongoLogger(path string) (logger *mongoLogger, err error) {
-	return nil, nil
+func ConfigureMongoLogger(mongoURL string, database string, collection string) (logger *mongoLogger, err error) {
+
+	if MongoDBLogger != nil {
+		MongoDBLogger.session.Close()
+	}
+
+	session, er := mgo.Dial(mongoURL)
+
+	if er != nil {
+		logger = nil
+		MongoDBLogger = nil
+		err = er
+		return
+	}
+
+	c := session.DB(database).C(collection)
+
+	MongoDBLogger = newMongoLogger(session, c)
+
+	return MongoDBLogger, nil
 }
