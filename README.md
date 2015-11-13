@@ -42,7 +42,7 @@ MongoDBLogger.Log("Something to log")
 
 ## Documentation
 
-See our docs on [Wiki](https://github.com/VALERE91/logger/wiki)
+See docs on [Wiki](https://github.com/VALERE91/logger/wiki)
 
 ## License
 
