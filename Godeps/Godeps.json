@@ -1,5 +1,11 @@
 {
 	"ImportPath": "github.com/VALERE91/logger",
 	"GoVersion": "go1.5.1",
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "gopkg.in/mgo.v2",
+			"Comment": "r2015.10.05-1-g4d04138",
+			"Rev": "4d04138ffef2791c479c0c8bbffc30b34081b8d9"
+		}
+	]
 }

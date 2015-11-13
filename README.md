@@ -11,6 +11,12 @@ A [Go](http://golang.org/) logging library able to log in MongoDB, standard outp
 go get github.com/valere91/logger
 ```
 
+The library has one dependency : mgo.v2
+
+```bash
+go get gopkg.in/mgo.v2
+```
+
 ## Basic Usage
 
 ### To standard outputs
