@@ -2,8 +2,8 @@
 
 A [Go](http://golang.org/) logging library able to log in MongoDB, standard outputs and files
 
-[![Build Status](https://travis-ci.org/VALERE91/logger.svg?branch=develop)](https://travis-ci.org/VALERE91/logger)
-[![Coverage Status](https://coveralls.io/repos/VALERE91/logger/badge.svg?branch=develop&service=github)](https://coveralls.io/github/VALERE91/logger?branch=develop)
+[![Build Status](https://travis-ci.org/VALERE91/logger.svg?branch=master)](https://travis-ci.org/VALERE91/logger)
+[![Coverage Status](https://coveralls.io/repos/VALERE91/logger/badge.svg?branch=master&service=github)](https://coveralls.io/github/VALERE91/logger?branch=master)
 
 ## Installation
 
@@ -76,5 +76,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
