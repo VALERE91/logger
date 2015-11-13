@@ -11,7 +11,11 @@ A [Go](http://golang.org/) logging library able to log in MongoDB, standard outp
 
 ## Usage
 
+### To standard outputs
 
+### To file
+
+### To MongoDB
 
 ## License
 
