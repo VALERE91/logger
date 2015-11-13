@@ -2,10 +2,16 @@ package logger
 import "testing"
 
 func TestConfigureFileLogger(t *testing.T) {
-	var logger , _ = ConfigureFileLogger("./test.log")
+	var logger , err = ConfigureFileLogger("./test.log")
 
 	if logger == nil || FileLogger == nil{
 		t.Error("FileLogger should be not nil")
+	}
+
+	logger , err = ConfigureFileLogger("")
+
+	if err == nil {
+		t.Error("ConfigureFileLogger : Error with an empty string should not be nil")
 	}
 }
 

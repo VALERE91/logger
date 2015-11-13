@@ -7,6 +7,15 @@ import (
 	"os"
 )
 
+type testWriter struct {
+	output string
+}
+
+func (self *testWriter) Write(b []byte) (n int, err error) {
+	self.output = string(b)
+	return len(b), nil
+}
+
 var TestWriter = testWriter{}
 
 func TestStdDebug(t *testing.T) {
