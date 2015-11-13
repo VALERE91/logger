@@ -2,9 +2,9 @@ package logger
 
 import (
 	"fmt"
+	"os"
 	"testing"
 	"time"
-	"os"
 )
 
 type testWriter struct {
@@ -163,14 +163,14 @@ func TestStdFatalF(t *testing.T) {
 }
 
 func TestNewStreamLogger(t *testing.T) {
-	if newStreamLogger(os.Stdout) == nil{
+	if newStreamLogger(os.Stdout) == nil {
 		t.Error("Return of newStreamLogger should not be null")
 	}
 }
 
 func TestDefaultWrite(t *testing.T) {
 	var testLogger = newStreamLogger(&TestWriter)
-	testLogger.defaultWrite("DEBUG","Something append")
+	testLogger.defaultWrite("DEBUG", "Something append")
 
 	if TestWriter.output != fmt.Sprintf("[%s]DEBUG : %s", time.Now().Format("Mon _2 Jan 2006 15:04"), "Something append") {
 		t.Errorf("StdLogger.Debug(\"Something append\") should log %s instead of %s",

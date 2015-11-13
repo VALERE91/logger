@@ -1,14 +1,17 @@
 package logger
-import "testing"
+
+import (
+	"testing"
+)
 
 func TestConfigureFileLogger(t *testing.T) {
-	var logger , err = ConfigureFileLogger("./test.log")
+	var logger, err = ConfigureFileLogger("./test.log")
 
-	if logger == nil || FileLogger == nil{
+	if logger == nil || FileLogger == nil {
 		t.Error("FileLogger should be not nil")
 	}
 
-	logger , err = ConfigureFileLogger("")
+	logger, err = ConfigureFileLogger("")
 
 	if err == nil {
 		t.Error("ConfigureFileLogger : Error with an empty string should not be nil")
@@ -16,17 +19,15 @@ func TestConfigureFileLogger(t *testing.T) {
 }
 
 func TestConfigureMongoLogger(t *testing.T) {
-	var logger , _ = ConfigureMongoLogger("./test.log")
+	var logger, err = ConfigureMongoLogger("localhost", "test", "logs")
 
-	if logger != nil {
-		t.Error("Mongo should be nil (implementation not finished)")
+	if err != nil || logger == nil {
+		t.Error("Error must be nil and logger not")
 	}
-}
 
-func TestTestWriterWrite(t *testing.T) {
-	wr := testWriter{}
-	wr.Write([]byte("HELLO"))
-	if wr.output != "HELLO"{
-		t.Error("Output of testWriter should be HELLO")
+	logger, err = ConfigureMongoLogger("stupid_cdn", "test", "logs")
+
+	if err == nil || logger != nil {
+		t.Error("Without connection logger must be nil and error set properly")
 	}
 }
