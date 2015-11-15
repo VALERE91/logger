@@ -6,6 +6,8 @@ A [Go](http://golang.org/) logging library able to log in MongoDB, standard outp
 [![Coverage Status](https://coveralls.io/repos/VALERE91/logger/badge.svg?branch=master&service=github)](https://coveralls.io/github/VALERE91/logger?branch=master)
 [![License MIT](https://img.shields.io/npm/l/express.svg)](http://opensource.org/licenses/MIT)
 
+Warning : this project is in early alpha
+
 ## Installation
 
 ```bash
